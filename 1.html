@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">\
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </head>
+  <body>
+    <!-- <div class="div1">
+        <button type="button" onclick="back()">Back</button>
+        <h2>Tính sản phẩm giảm giá</h2>
+        <label for="tensanpham">Tên sản phẩm </label><br>
+        <input type="text" id="txttensanpham" value=""><br>
+        <label for="giatien">Giá tiền</label><br>
+        <input type="number" id="txtgiatien" value=""><br>
+        <label for="giamgia">Giảm giá</label><br>
+        <input type="number" id="txtgiamgia" value="" readonly><br>
+        <input type="range" name="rangeInput" min="0" max="100" value="0" onchange="updateTextInput(this.value);"> -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Gửi</button>
+    <div id="myModal1" class="modal fade" role="dialog" style="z-index: 1400;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body">
+                        <h2>Tính sản phẩm giảm giá</h2>
+                        <label for="tensanpham">Tên sản phẩm </label><br>
+                        <input type="text" id="txttensanpham" value=""><br>
+                        <label for="giatien">Giá tiền</label><br>
+                        <input type="number" id="txtgiatien" value=""><br>
+                        <label for="giamgia">Giảm giá</label><br>
+                        <input type="number" id="txtgiamgia" value="" readonly><br>
+                        <input type="range" name="rangeInput" min="0" max="100" value="0" onchange="updateTextInput(this.value);">
+                        <img src="3.gif" alt="Stickman" width="240" height="190">
+                        <div class="modal-body">
+                            <div class="div2">
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="myFunction()">Gửi</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <!-- <div id="myModal" class="modal fade" role="dialog" style="z-index: 1600;"> -->
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" id="titleName"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p id='content'></p>
+                                    <h3 class="modal-title" style="display: inline-flex;">Tên sản phẩm:
+                                        <p id="gettxttensanpham"></p>
+                                    </h3> <br>
+                                    <h3 class="modal-title" style="display: inline-flex;">Giá tiền:
+                                        <p class="modal-title" id="gettxtgiatien"></p>
+                                    </h3> <br>
+                                    <h3 class="modal-title" style="display: inline-flex;">Giảm giá:
+                                        <p class="modal-title" id="gettxtgiamgia"></p>
+                                    </h3> <br>
+                                    <h3 class="modal-title" style="display: inline-flex;">Số tiền còn lại khi giảm giá là:
+                                        <p class="modal-title" id="getvaluetotalScore"></p>
+                                    </h3> <br>
+                                    <!-- <img src="/images/3.gif" alt="Stickman" width="240" height="190"> -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Thoát</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+  </body>
+</html>

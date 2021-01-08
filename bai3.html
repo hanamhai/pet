@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"
+            onclick="myFunction()">tính lãi</button>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" onclick="reset()">&times;</button>
+                        <h4 class="modal-title" id="titleName">Lãi Gửi</h4>
+                        
+                    </div>
+                    <p id='content'></p>
+                    <form id="as">
+                    <div class="modal-body">
+                        
+                        <h3 class="modal-title" style="display: inline-flex;">tên khách hàng:</h3>
+                        <input class="modal-title" style="display: inline-flex;" name="name" id="name"> <br>
+                        <h3 class="modal-title" style="display: inline-flex;">số tiền gửi:</h3>
+                        <input class="modal-title" style="display: inline-flex;" name="tiengui" id="tiengui"></h3> <br>
+                        <h3 class="modal-title" style="display: inline-flex;">lãi suất:</h3>
+                        <input class="modal-title" style="display: inline-flex;" name="lai" id="lai"><br>
+                        <h3 class="modal-title" style="display: inline">kỳ hạn tính lãi</h3>
+                        <select class="modal-title" style="display: inline-flex" id="kyhangui">
+                            <option selected="selected" disabled="disabled" hidden="hidden">Kỳ hạn gửi</option>
+                            <option value="3">3 tháng</option>
+                            <option value="6">6 tháng</option>
+                            <option value="12">12 tháng</option>
+                            <option value="18">18 tháng</option>
+                            <option value="24">24 tháng</option>
+                            <option value="36">36 tháng</option>
+                            <option value="60">60 tháng</option>
+                        </select></h3>
+                    </div>
+                    </form>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#test2" onclick="demo()">Gửi</button>
+                        <button type="button" class="btn btn-info btn-lg" onclick="reset()">reset</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="reset()">Thoát</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="test2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="titleName">hafas</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <h3 class="modal-title" style="display: inline-flex;">Tên khách hàng:<p class="modal-title"
+                                id="getvalueTKH"></p>
+                        </h3><br>
+                        <h3 class="modal-title" style="display: inline-flex;">Số tiền gửi:<p class="modal-title"
+                                id="getvalueSTG"></p>
+                        </h3><br>
+                        <h3 class="modal-title" style="display: inline-flex;">Lãi suất:<p class="modal-title"
+                                id="getvalueLS"></p>
+                        </h3><br>
+                        <h3 class="modal-title" style="display: inline-flex;">Kỳ hạn gửi:<p class="modal-title"
+                                id="getvalueKHG"></p>
+                        </h3><br>
+                        <h3 class="modal-title" style="display: inline-flex;">Số tiền lãi hàng tháng:<p class="modal-title"
+                            id="getvalueLHT"></p>
+                        </h3><br>
+                        <h3 class="modal-title" style="display: inline-flex;">Số tiền lãi dự kiến:<p class="modal-title"
+                            id="getvalueLDK"></p>
+                        </h3><br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Thoát</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="bai3.js"></script>
+</body>
+
+</html>
